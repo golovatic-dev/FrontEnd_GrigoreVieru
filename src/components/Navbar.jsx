@@ -34,7 +34,7 @@ function Navbar() {
           <div className="container-fluid ">
             <span className="navbar-brand flex items-center">
               <img
-                src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F806786569%2F1633184430263%2F1%2Foriginal.20240712-162331?w=600&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C396%2C1600%2C800&s=6128b1650e792e3efa97a87aebe9c22f"
+                src="src/assets/logo.png"
                 alt=""
                 className="navbar-brand rounded-full  object-fill  w-[50px] lg:w-[80px]  "
               />
