@@ -1,14 +1,16 @@
-import React from 'react';
-import { Lightbulb, Group, ThumbUp } from '@mui/icons-material';
+import React from 'react'
+import { Lightbulb, Group, ThumbUp } from '@mui/icons-material'
 
 const Moto = () => {
   return (
     <div className="bg-gradient-to-b from-blue-50 to-white py-20">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold mb-6 text-blue-900">Our Mission & Motto</h1>
+          <h1 className="text-5xl font-bold mb-6 text-blue-900">
+            Misiunea Noastră & Motto
+          </h1>
           <p className="text-2xl font-semibold text-blue-700">
-            Challenge Yourself, Inspire Excellence
+            Provocă-te pe Tine Însuți, Inspiră Excelență
           </p>
         </div>
 
@@ -20,42 +22,64 @@ const Moto = () => {
             >
               <div className="flex items-center justify-center mb-6">
                 <div className="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center">
-                  {React.cloneElement(item.icon, { className: "text-blue-600 text-3xl" })}
+                  {React.cloneElement(item.icon, {
+                    className: 'text-blue-600 text-3xl',
+                  })}
                 </div>
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-blue-800 text-center">{item.title}</h3>
-              <p className="text-gray-600 leading-relaxed">{item.description}</p>
+              <h3 className="text-2xl font-bold mb-4 text-blue-800 text-center">
+                {item.title}
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                {item.description}
+              </p>
             </div>
           ))}
         </div>
 
         <div className="bg-white rounded-xl shadow-xl p-8">
-          <h2 className="text-3xl font-bold mb-6 text-blue-800 text-center">Our Mission</h2>
+          <h2 className="text-3xl font-bold mb-6 text-blue-800 text-center">
+            Misiunea Noastră
+          </h2>
           <p className="text-lg text-gray-600 leading-relaxed">
-            At <span className="font-semibold text-blue-700">Springdale Public School</span>, our mission is to cultivate a nurturing and inclusive environment where every student is empowered to reach their full potential. We are committed to providing a holistic education that fosters academic excellence, critical thinking, creativity, and personal growth. Through a balanced approach to learning, we aim to equip our students with the skills and values necessary to become compassionate, responsible, and successful global citizens.
+            La{' '}
+            <span className="font-semibold text-blue-700">
+              Gimnaziul Sărata Veche
+            </span>
+            , misiunea noastră este să cultivăm un mediu prietenos și incluziv,
+            în care fiecare elev de gimnaziu este încurajat să-și atingă
+            întregul potențial. Ne angajăm să oferim o educație completă, care
+            să promoveze excelența academică, gândirea critică, creativitatea și
+            dezvoltarea personală. Printr-o abordare echilibrată a învățării, ne
+            propunem să le oferim elevilor noștri abilitățile și valorile
+            necesare pentru a deveni cetățeni globali responsabili, empatici și
+            de succes.
           </p>
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 const mottoItems = [
   {
-    title: 'Innovation',
-    description: 'We strive to cultivate a spirit of innovation among our students, encouraging them to think outside the box, explore new ideas, and pioneer groundbreaking solutions to real-world challenges.',
+    title: 'Inovație',
+    description:
+      'Ne străduim să cultivăm un spirit de inovație în rândul elevilor noștri, încurajându-i să gândească diferit, să exploreze idei noi și să găsească soluții originale pentru provocările reale ale lumii.',
     icon: <Lightbulb />,
   },
   {
-    title: 'Teamwork',
-    description: 'We recognize the importance of teamwork in achieving collective success. Through collaborative projects and extracurricular activities, we foster a collaborative mindset among our students.',
+    title: 'Lucru în echipă',
+    description:
+      'Recunoaștem importanța lucrului în echipă pentru succesul colectiv. Prin proiecte colaborative și activități extracurriculare, dezvoltăm o mentalitate de cooperare în rândul elevilor.',
     icon: <Group />,
   },
   {
-    title: 'Quality',
-    description: 'Quality is at the core of everything we do. From our rigorous academic standards to our state-of-the-art facilities and experienced faculty, we are committed to delivering excellence in education.',
+    title: 'Calitate',
+    description:
+      'Calitatea se află în centrul a tot ceea ce facem. De la standardele academice riguroase, la facilitățile moderne și cadrele didactice cu experiență, ne angajăm să oferim o educație de excelență.',
     icon: <ThumbUp />,
   },
-];
+]
 
-export default Moto;
+export default Moto
