@@ -1,69 +1,77 @@
-import React from 'react';
+import React from 'react'
 
 const Curriculum = () => {
   return (
     <div className="bg-gradient-to-b from-blue-50 to-white py-20">
       <div className="container mx-auto px-6">
         <h1 className="text-5xl font-bold text-center mb-16 text-blue-900">
-          Our Curriculum
+          Curriculumul Nostru
         </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {[
             {
-              title: "Primary (Grades 1-5)",
-              subjects: ["English", "Mathematics", "Science", "Social Studies", "Art", "Physical Education"],
-              color: "bg-green-500"
-            },
-            {
-              title: "Secondary (Grades 6-10)",
-              subjects: ["English", "Mathematics", "Science (Physics, Chemistry, Biology)", "Social Studies", "Computer Science", "Physical Education", "Art"],
-              color: "bg-blue-500"
-            },
-            {
-              title: "Senior Secondary (Grades 11-12)",
-              streams: [
-                {
-                  name: "Science Stream",
-                  subjects: ["Physics", "Chemistry", "Biology", "Mathematics", "Computer Science", "English"]
-                },
-                {
-                  name: "Commerce Stream",
-                  subjects: ["Accountancy", "Business Studies", "Economics", "Mathematics", "English"]
-                }
+              title: 'Clasele 1–4',
+              subjects: [
+                'Limba și literatura română',
+                'Matematica',
+                'Educație civică',
+                'Dezvoltare personală',
+                'Muzică și mișcare',
+                'Arte plastice',
+                'Educație fizică',
               ],
-              color: "bg-purple-500"
-            }
-          ].map((grade, index) => (
-            <div key={index} className="bg-white rounded-xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
-              <div className={`${grade.color} py-4 px-6`}>
-                <h3 className="text-2xl font-bold text-white">{grade.title}</h3>
+              color: 'bg-green-500',
+            },
+            {
+              title: 'Clasele 5–7',
+              subjects: [
+                'Limba și literatura română',
+                'Limba străină (engleză, franceză etc.)',
+                'Matematica',
+                'Istoria',
+                'Geografia',
+                'Biologia',
+                'Educația tehnologică',
+                'Educația muzicală',
+                'Educația fizică',
+              ],
+              color: 'bg-blue-500',
+            },
+            {
+              title: 'Clasele 8–9',
+              subjects: [
+                'Limba și literatura română',
+                'Limba străină (engleză, franceză etc.)',
+                'Matematica (Algebră și Geometrie)',
+                'Fizica',
+                'Chimia',
+                'Biologia',
+                'Istoria',
+                'Geografia',
+                'Educația civică',
+                'Informatica',
+                'Educația fizică',
+              ],
+              color: 'bg-purple-500',
+            },
+          ].map((nivel, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
+            >
+              <div className={`${nivel.color} py-4 px-6`}>
+                <h3 className="text-2xl font-bold text-white">{nivel.title}</h3>
               </div>
               <div className="p-6">
-                {grade.subjects ? (
-                  <ul className="space-y-2">
-                    {grade.subjects.map((subject, idx) => (
-                      <li key={idx} className="flex items-center">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
-                        {subject}
-                      </li>
-                    ))}
-                  </ul>
-                ) : (
-                  grade.streams.map((stream, streamIdx) => (
-                    <div key={streamIdx} className="mb-4">
-                      <h4 className="text-xl font-semibold mb-2 text-blue-700">{stream.name}</h4>
-                      <ul className="space-y-2">
-                        {stream.subjects.map((subject, subIdx) => (
-                          <li key={subIdx} className="flex items-center">
-                            <span className="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
-                            {subject}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))
-                )}
+                <ul className="space-y-2">
+                  {nivel.subjects.map((subject, idx) => (
+                    <li key={idx} className="flex items-center">
+                      <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                      {subject}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           ))}
@@ -72,28 +80,37 @@ const Curriculum = () => {
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-10">
           {[
             {
-              title: "Teaching Methodologies",
-              description: "We use a blend of traditional and modern teaching techniques to cater to different learning styles.",
-              icon: "📚"
+              title: 'Metode de Predare',
+              description:
+                'Folosim o combinație de metode tradiționale și moderne pentru a răspunde diferitelor stiluri de învățare.',
+              icon: '📚',
             },
             {
-              title: "Educational Resources",
-              description: "Digital classrooms, interactive learning modules, and access to online educational platforms.",
-              icon: "💻"
-            }
+              title: 'Resurse Educaționale',
+              description:
+                'Săli de clasă digitale, module interactive de învățare și acces la platforme educaționale online.',
+              icon: '💻',
+            },
           ].map((item, index) => (
-            <div key={index} className="bg-white rounded-xl shadow-xl p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+            <div
+              key={index}
+              className="bg-white rounded-xl shadow-xl p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
+            >
               <div className="flex items-center mb-4">
                 <span className="text-4xl mr-4">{item.icon}</span>
-                <h3 className="text-2xl font-bold text-blue-800">{item.title}</h3>
+                <h3 className="text-2xl font-bold text-blue-800">
+                  {item.title}
+                </h3>
               </div>
-              <p className="text-gray-600 leading-relaxed">{item.description}</p>
+              <p className="text-gray-600 leading-relaxed">
+                {item.description}
+              </p>
             </div>
           ))}
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Curriculum;
+export default Curriculum
