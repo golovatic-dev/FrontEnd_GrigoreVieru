@@ -1,15 +1,15 @@
-import { Cancel } from '@mui/icons-material';
-import React, { useState } from 'react';
-import Modal from 'react-modal';
+import { Cancel } from '@mui/icons-material'
+import React, { useState } from 'react'
+import Modal from 'react-modal'
 
-import 'react-lazy-load-image-component/src/effects/blur.css';
+import 'react-lazy-load-image-component/src/effects/blur.css'
 
-Modal.setAppElement('#root');
+Modal.setAppElement('#root')
 
 const Campus = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [selectedVideo, setSelectedVideo] = useState(null);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [selectedImage, setSelectedImage] = useState(null)
+  const [selectedVideo, setSelectedVideo] = useState(null)
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
   const campusImages = [
     'https://upload.wikimedia.org/wikipedia/commons/a/a7/Springdale_High_School%2C_Arkansas.JPG',
@@ -18,47 +18,55 @@ const Campus = () => {
     'https://har-bernhs.weebly.com/uploads/2/6/5/7/26574828/261266692.jpg',
     'https://cmsv2-assets.apptegy.net/uploads/2600/file/206293/3c262193-675a-4505-a71d-77fc6762c718.jpeg',
     'https://springdaleeducation.com/wp-content/uploads/2022/11/INFRASTRUCTURE-1.jpg',
-  ];
+  ]
 
   const campusVideos = [
     'https://www.youtube.com/embed/FUSJkqaHgYk?si=Nv40Vzc_Y4gA_7aO',
     'https://www.youtube.com/embed/SxoVEOt_muA?si=J72T9TXqAzM9Ob6P',
-  ];
+  ]
 
   const openImageModal = (imageUrl, index) => {
-    setSelectedImage(imageUrl);
-    setCurrentImageIndex(index);
-  };
+    setSelectedImage(imageUrl)
+    setCurrentImageIndex(index)
+  }
 
   const closeImageModal = () => {
-    setSelectedImage(null);
-  };
+    setSelectedImage(null)
+  }
 
   const openVideoModal = (videoUrl) => {
-    setSelectedVideo(videoUrl);
-  };
+    setSelectedVideo(videoUrl)
+  }
 
   const closeVideoModal = () => {
-    setSelectedVideo(null);
-  };
+    setSelectedVideo(null)
+  }
 
   const nextImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % campusImages.length);
-    setSelectedImage(campusImages[(currentImageIndex + 1) % campusImages.length]);
-  };
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % campusImages.length)
+    setSelectedImage(
+      campusImages[(currentImageIndex + 1) % campusImages.length]
+    )
+  }
 
   const prevImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex - 1 + campusImages.length) % campusImages.length);
-    setSelectedImage(campusImages[(currentImageIndex - 1 + campusImages.length) % campusImages.length]);
-  };
+    setCurrentImageIndex(
+      (prevIndex) => (prevIndex - 1 + campusImages.length) % campusImages.length
+    )
+    setSelectedImage(
+      campusImages[
+        (currentImageIndex - 1 + campusImages.length) % campusImages.length
+      ]
+    )
+  }
 
   return (
     <div className="bg-gray-100 py-16">
       <div className="container mx-auto text-center px-4">
-       
-
         <section>
-          <h2 className="text-3xl lg:text-5xl font-bold mb-8 text-indigo-700">Campus Showcase</h2>
+          <h2 className="text-3xl lg:text-5xl font-bold mb-8 text-indigo-700">
+            Campus Showcase
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
             {campusImages.map((imageUrl, index) => (
               <div
@@ -80,7 +88,9 @@ const Campus = () => {
           </div>
         </section>
         <section className="mb-16">
-          <h2 className="text-3xl lg:text-5xl font-bold mb-8 text-indigo-700">Campus Video Showcase</h2>
+          <h2 className="text-3xl lg:text-5xl font-bold mb-8 text-indigo-700">
+            Campus Video Showcase
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {campusVideos.map((videoUrl, index) => (
               <div
@@ -98,14 +108,14 @@ const Campus = () => {
                 </div>
                 <div className="absolute inset-0 bg-black opacity-0 hover:opacity-60 transition-opacity duration-300"></div>
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-white font-bold text-lg">▶ Click to play</p>
+                  <p className="text-white font-bold text-lg">
+                    ▶ Click to play
+                  </p>
                 </div>
               </div>
             ))}
           </div>
         </section>
-
-
 
         <Modal
           isOpen={!!selectedImage}
@@ -126,16 +136,21 @@ const Campus = () => {
                 className="absolute top-4 right-4 cursor-pointer text-white text-3xl bg-gray-700 bg-opacity-75 rounded-full p-1"
                 style={{ fontSize: '2rem' }}
               />
-              <button onClick={prevImage} className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2">
+              <button
+                onClick={prevImage}
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2"
+              >
                 &#10094;
               </button>
-              <button onClick={nextImage} className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2">
+              <button
+                onClick={nextImage}
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2"
+              >
                 &#10095;
               </button>
             </div>
           </div>
         </Modal>
-
 
         <Modal
           isOpen={!!selectedVideo}
@@ -162,7 +177,7 @@ const Campus = () => {
         </Modal>
       </div>
     </div>
-  );
+  )
 }
 
-export default Campus;
+export default Campus
