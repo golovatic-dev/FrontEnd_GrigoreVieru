@@ -1,55 +1,64 @@
-import './App.css';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-import { KeyboardArrowUp } from '@mui/icons-material';
+import './App.css'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { KeyboardArrowUp } from '@mui/icons-material'
 
-import Coursoul from './components/Coursoul';
-import Main1 from './components/Main1';
-import Main2 from './components/Main2';
-import Marquee from './components/Marquee';
-import Navbar from './components/Navbar';
-import Checkout from './components/Checkout';
-import Main3 from './components/Main3';
-import Footer from './components/Footer';
-import About from './components/Faculty';
-import Moto from './components/Moto';
-import Campus from './components/Campus';
-import College from './components/About';
-import Contact from './components/Contact';
-import Timer from './components/Timer';
-import Events from './components/Events';
-import Curriculum from './components/Curriculum';
-import Faculty from './components/Faculty';
-import Students from './components/Students';
+import Coursoul from './components/Coursoul'
+import Main1 from './components/Main1'
+import Main2 from './components/Main2'
+import Marquee from './components/Marquee'
+import Navbar from './components/Navbar'
+import Checkout from './components/Checkout'
+import Main3 from './components/Main3'
+import Footer from './components/Footer'
+import About from './components/Faculty'
+import Moto from './components/Moto'
+import Campus from './components/Campus'
+import College from './components/About'
+import Contact from './components/Contact'
+import Timer from './components/Timer'
+import Events from './components/Events'
+import Curriculum from './components/Curriculum'
+import Faculty from './components/Faculty'
+import Students from './components/Students'
 
 function App() {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
-    window.addEventListener('scroll', toggleVisibility);
+    window.addEventListener('scroll', toggleVisibility)
     return () => {
-      window.removeEventListener('scroll', toggleVisibility);
-    };
-  }, []);
+      window.removeEventListener('scroll', toggleVisibility)
+    }
+  }, [])
 
   const toggleVisibility = () => {
-    setIsVisible(window.scrollY > 300);
-  };
+    setIsVisible(window.scrollY > 300)
+  }
 
   return (
     <Router>
-      <div className='bg-gray-100'>
+      <div className="bg-gray-100">
         <Navbar />
         <Routes>
           <Route
             exact
-            path='/'
+            path="/"
             element={
               <div>
                 <Coursoul />
-                <Marquee text={`"Welcome to Springdale Public School, where we nurture young minds for a brighter future."`} />
+                <Marquee
+                  text={`Bine ați venit la Gimnaziul „Grigore Vieru” din Sărata Veche – locul unde tradiția se împletește cu inovația în educație.`}
+                />
                 <Timer />
-                <Marquee text={`"Join us for our Annual Science Exhibition, where students showcase innovative science projects and experiments."`} />
+                <Marquee
+                  text={`Vă invităm la Săptămâna Limbii și Literaturii Române – o celebrare a culturii și creativității elevilor noștri.`}
+                />
                 <Main2 />
                 <Checkout />
                 <Main1 />
@@ -60,7 +69,7 @@ function App() {
 
           <Route
             exact
-            path='/faculty'
+            path="/faculty"
             element={
               <>
                 <Faculty />
@@ -73,7 +82,7 @@ function App() {
 
           <Route
             exact
-            path='/students'
+            path="/students"
             element={
               <>
                 <Students />
@@ -86,7 +95,7 @@ function App() {
 
           <Route
             exact
-            path='/campus'
+            path="/campus"
             element={
               <>
                 <Campus />
@@ -100,7 +109,7 @@ function App() {
 
           <Route
             exact
-            path='/events'
+            path="/events"
             element={
               <>
                 <Events />
@@ -114,7 +123,7 @@ function App() {
 
           <Route
             exact
-            path='/curriculum'
+            path="/curriculum"
             element={
               <>
                 <Curriculum />
@@ -127,7 +136,7 @@ function App() {
 
           <Route
             exact
-            path='/moto'
+            path="/moto"
             element={
               <>
                 <Moto />
@@ -140,7 +149,7 @@ function App() {
 
           <Route
             exact
-            path='/aboutus'
+            path="/aboutus"
             element={
               <>
                 <College />
@@ -154,7 +163,7 @@ function App() {
 
           <Route
             exact
-            path='/contact'
+            path="/contact"
             element={
               <>
                 <Contact />
@@ -165,7 +174,7 @@ function App() {
             }
           />
 
-          <Route path='*' element={<Navigate to="/" />} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
 
         {isVisible && (
@@ -179,7 +188,7 @@ function App() {
         <Footer />
       </div>
     </Router>
-  );
+  )
 }
 
-export default App;
+export default App

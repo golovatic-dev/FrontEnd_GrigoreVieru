@@ -10,7 +10,7 @@ const About = () => {
             Gimnaziul Grigore Vieru
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Formăm minți tinere și pregătim liderii de mâine din 1984
+            Formăm minți tinere și pregătim liderii de mâine din 1972
           </p>
         </div>
 
