@@ -41,7 +41,7 @@ const About = () => {
             Moștenirea Noastră
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed">
-            Încă din 1984, Gimnaziul Grigore Vieru s-a dezvoltat într-o
+            Încă din 1972, Gimnaziul Grigore Vieru s-a dezvoltat într-o
             instituție de învățământ apreciată pentru angajamentul său față de
             educația de calitate. Am evoluat constant, integrând metode moderne
             de predare și adaptând programa școlară pentru a răspunde nevoilor
