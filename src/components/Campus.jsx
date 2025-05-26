@@ -65,7 +65,7 @@ const Campus = () => {
       <div className="container mx-auto text-center px-4">
         <section>
           <h2 className="text-3xl lg:text-5xl font-bold mb-8 text-indigo-700">
-            Campus Showcase
+            Prezentarea Campusului
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
             {campusImages.map((imageUrl, index) => (
@@ -81,7 +81,9 @@ const Campus = () => {
                 />
                 <div className="absolute inset-0 bg-black opacity-50"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <p className="text-white font-semibold">Click to enlarge</p>
+                  <p className="text-white font-semibold">
+                    Apasă pentru a mări
+                  </p>
                 </div>
               </div>
             ))}
@@ -89,7 +91,7 @@ const Campus = () => {
         </section>
         <section className="mb-16">
           <h2 className="text-3xl lg:text-5xl font-bold mb-8 text-indigo-700">
-            Campus Video Showcase
+            Prezentări Video din Campus
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {campusVideos.map((videoUrl, index) => (
@@ -109,7 +111,7 @@ const Campus = () => {
                 <div className="absolute inset-0 bg-black opacity-0 hover:opacity-60 transition-opacity duration-300"></div>
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
                   <p className="text-white font-bold text-lg">
-                    ▶ Click to play
+                    ▶ Apasă pentru a reda
                   </p>
                 </div>
               </div>
