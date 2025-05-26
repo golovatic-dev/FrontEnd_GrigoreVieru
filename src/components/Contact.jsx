@@ -70,8 +70,8 @@ function Contact() {
             <h3 className="text-2xl font-semibold mb-4 text-blue-800">
               Program Birou
             </h3>
-            <p className="text-gray-600">Luni - Vineri: 9:00 - 17:00</p>
-            <p className="text-gray-600">Sâmbătă: 10:00 - 14:00</p>
+            <p className="text-gray-600">Luni - Vineri: 8:00 - 17:00</p>
+            <p className="text-gray-600">Sâmbătă: Închis</p>
             <p className="text-gray-600">Duminică: Închis</p>
           </div>
           <div className="p-8 bg-white shadow-xl rounded-3xl hover:shadow-2xl transition duration-300 transform hover:scale-105 text-center">
@@ -82,9 +82,7 @@ function Contact() {
             <h3 className="text-2xl font-semibold mb-4 text-blue-800">
               Ne găsești aici
             </h3>
-            <p className="text-gray-600">
-              Strada Școlii 1234, Sărata Veche, raionul Fălești
-            </p>
+            <p className="text-gray-600">Sărata Veche, raionul Fălești</p>
           </div>
         </div>
       </div>
@@ -128,10 +126,10 @@ function Contact() {
                 Date Importante
               </h3>
               <ul className="text-gray-600 space-y-2">
-                <li>Formulare disponibile: 1 Martie</li>
-                <li>Termen limită: 31 Martie</li>
-                <li>Test de admitere: 15 Aprilie</li>
-                <li>Rezultate: 30 Aprilie</li>
+                <li>Formulare disponibile: 1 Iunie</li>
+                <li>Termen limită: 31 Iunie</li>
+                <li>Test de admitere: 15 Iulie</li>
+                <li>Rezultate: 30 Iulie</li>
               </ul>
             </div>
           </div>
@@ -145,7 +143,7 @@ function Contact() {
         <div className="rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition duration-300">
           <iframe
             title="Google Maps"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25765.067332804723!2d-94.16618081142514!3d36.17547421545538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c914b302758579%3A0xa131eaadd43bbc5a!2sSpringdale%2C%20AR%2C%20USA!5e0!3m2!1sen!2sin!4v1721770478701!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d851.9392299564225!2d27.737120290261473!3d47.50312698273704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40cb153e9c55c679%3A0x150cfc698d7d6c20!2sGimnaziul%20%22Grigore%20Vieru%22%20sat%20Sarata%20Veche!5e1!3m2!1sen!2s!4v1748263399481!5m2!1sen!2s"
             frameBorder="0"
             className="w-full h-[500px] border-0"
             allowFullScreen
