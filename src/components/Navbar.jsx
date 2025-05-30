@@ -15,7 +15,9 @@ function Navbar() {
       <div className="container-fluid ">
         <div className="row hidden lg:flex lg:items-center lg:justify-between p-3 text-white bg-gradient-to-br from-indigo-800 to-gray-800">
           <div className="col-6 d-flex items-center">
-            <h5 className="fw-bold ">Gimnaziul "Grigore Vieru"</h5>
+            <h5 className="fw-bold ">
+              Site-ul școlii gimnaziale din Satul Sărata Veche
+            </h5>
           </div>
           <div className="col-6 d-flex justify-content-end">
             <a
