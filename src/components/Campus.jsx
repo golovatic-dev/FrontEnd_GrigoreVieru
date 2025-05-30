@@ -20,8 +20,8 @@ const Campus = () => {
   ]
 
   const campusVideos = [
-    'https://www.facebook.com/share/v/15LBs35kBK/',
-    'https://www.facebook.com/share/v/19YQyHpnLF/',
+    'https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FcentruldecreatieLoraGainaFalesti%2Fvideos%2F727610484894390%2F&show_text=false&width=560&t=0',
+    'https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FcentruldecreatieLoraGainaFalesti%2Fvideos%2F314308983873325%2F&show_text=false&width=560&t=0',
   ]
 
   const openImageModal = (imageUrl, index) => {
@@ -80,16 +80,14 @@ const Campus = () => {
                 />
                 <div className="absolute inset-0 bg-black opacity-50"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <p className="text-white font-semibold">
-                    Apasă pentru a mări
-                  </p>
+                  <p className="text-white font-semibold">Mărește</p>
                 </div>
               </div>
             ))}
           </div>
         </section>
         <section className="mb-16">
-          <h2 className="text-3xl lg:text-5xl font-bold mb-8 text-indigo-700">
+          <h2 className="text-3xl lg:text-5xl font-bold mb-8 mt-8 text-indigo-700">
             Prezentări Video din Campus
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
