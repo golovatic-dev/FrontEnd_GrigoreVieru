@@ -18,8 +18,7 @@ function Contact() {
       <div
         className="relative h-[90vh] bg-cover bg-center"
         style={{
-          backgroundImage:
-            "url('https://springdale.peelschools.org/images/b82d5de2-8621-4a01-9259-2a45f8789911')",
+          backgroundImage: "url('src/assets/campus/gimnaziu.jpg')",
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
@@ -103,7 +102,7 @@ function Contact() {
                 secretariat.
               </p>
               <a
-                href="https://i.pinimg.com/474x/88/6c/72/886c729c5e6310e29e269031d73a5625.jpg"
+                href="src/assets/apply_form/Formular_Inscriere_Admitere_Gimnaziul_Grigore_Vieru.docx"
                 target="_blank"
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-teal-400 text-white rounded-full hover:from-blue-600 hover:to-teal-500 transition duration-300 transform hover:scale-105"
               >
