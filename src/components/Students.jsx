@@ -4,7 +4,7 @@ const Students = () => {
   return (
     <div className="container mx-auto px-4 py-16 bg-gray-100">
       <h1 className="text-5xl font-bold text-center mb-16 text-indigo-800">
-        Viața Elevilor la Gimnaziul Springdale
+        Viața Elevilor la Gimnaziul Grigore Vieru
       </h1>
 
       <section className="mb-20 bg-white rounded-xl shadow-lg p-8">
