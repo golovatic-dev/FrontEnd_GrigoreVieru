@@ -32,7 +32,7 @@ function Navbar() {
 
         <div className="lg:h-fit p-0 row navbar navbar-expand-lg d-flex bg-light ">
           <div className="container-fluid ">
-            <span className="navbar-brand flex items-center">
+            <Link to="/" className="navbar-brand flex items-center">
               <img
                 src="src/assets/logo.png"
                 alt=""
@@ -41,12 +41,12 @@ function Navbar() {
 
               <div className=" flex-col justify-center hidden lg:flex">
                 <span className="font-bold ">Gimnaziul Grigore Vieru</span>
-                <span className="small text-gray-500">Fălești</span>
+                <span className="small text-gray-500">Sărata Veche</span>
               </div>
               <span className="lg:hidden block text-sm">
                 Gimnaziul Grigore Vieru
               </span>
-            </span>
+            </Link>
 
             <div className="flex " id="navbarNav">
               <ul className="navbar-nav hidden lg:flex align-items-center ">
