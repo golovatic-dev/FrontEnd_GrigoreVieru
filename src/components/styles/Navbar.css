@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-active {
+  @apply font-bold text-blue-600;
+}
+
+.me-3 {
+  margin-inline: 0 !important;
+}
+.nav-item {
+  text-align: center;
+  margin: 0.75rem;
+}
+
+.contactListBtn {
+  padding-inline: 20px;
+}

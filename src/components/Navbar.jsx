@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 
 import { Link } from 'react-router-dom'
 import { Menu } from '@mui/icons-material'
+import { useLocation } from 'react-router-dom'
+import './styles/Navbar.css'
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -9,6 +11,7 @@ function Navbar() {
   const toggleMenu = () => {
     setIsOpen(!isOpen)
   }
+  const location = useLocation()
 
   return (
     <nav className="w-[100vw]">
@@ -53,43 +56,81 @@ function Navbar() {
             <div className="flex " id="navbarNav">
               <ul className="navbar-nav hidden lg:flex align-items-center ">
                 <Link to="/" className="nav-item">
-                  <a className="nav-link " aria-current="page" href="#">
+                  <a
+                    className={`nav-link ${
+                      location.pathname === '/' ? 'nav-active' : ''
+                    }`}
+                  >
                     ACASĂ
                   </a>
                 </Link>
                 <Link to="/aboutus" className="nav-item me-3">
-                  <a className="nav-link" href="#">
+                  <a
+                    className={`nav-link ${
+                      location.pathname === '/aboutus' ? 'nav-active' : ''
+                    }`}
+                  >
                     DESPRE NOI
                   </a>
                 </Link>
                 <Link to="/faculty" className="nav-item">
-                  <a className="nav-link " aria-current="page" href="#">
+                  <a
+                    className={`nav-link ${
+                      location.pathname === '/faculty' ? 'nav-active' : ''
+                    }`}
+                  >
                     ACTIVITĂȚI
                   </a>
                 </Link>
                 <Link to="/students" className="nav-item">
-                  <a className="nav-link " aria-current="page" href="#">
+                  <a
+                    className={`nav-link ${
+                      location.pathname === '/students' ? 'nav-active' : ''
+                    }`}
+                  >
                     ELEVI
                   </a>
                 </Link>
                 <Link to="/events" className="nav-item me-3">
-                  <a className="nav-link"> EVENIMENTE</a>
+                  <a
+                    className={`nav-link ${
+                      location.pathname === '/events' ? 'nav-active' : ''
+                    }`}
+                  >
+                    {' '}
+                    EVENIMENTE
+                  </a>
                 </Link>
                 <Link to="/curriculum" className="nav-item me-3">
-                  <a className="nav-link"> ACADEMICE</a>
+                  <a
+                    className={`nav-link ${
+                      location.pathname === '/curriculum' ? 'nav-active' : ''
+                    }`}
+                  >
+                    {' '}
+                    ACADEMICE
+                  </a>
                 </Link>
                 <Link to="/moto" className="nav-item me-3">
-                  <a className="nav-link" href="#">
+                  <a
+                    className={`nav-link ${
+                      location.pathname === '/moto' ? 'nav-active' : ''
+                    }`}
+                  >
                     MISIUNI
                   </a>
                 </Link>
                 <Link to="/campus" className="nav-item me-3">
-                  <a className="nav-link" href="#">
+                  <a
+                    className={`nav-link ${
+                      location.pathname === '/campus' ? 'nav-active' : ''
+                    }`}
+                  >
                     OBSERVĂ
                   </a>
                 </Link>
 
-                <li className="nav-item  me-3">
+                <li className="nav-item  me-3 contactListBtn">
                   <button className="btn  shadow btn-primary">
                     <Link
                       to="/contact"
