@@ -11,7 +11,7 @@ function Coursoul() {
         <div
           className="carousel-item active"
           style={{
-            backgroundImage: "url('src/assets/carousel/gimnaziu.jpg')",
+            backgroundImage: "url('src/assets/carousel/gimnaziu.png')",
             backgroundRepeat: 'none',
             backgroundPosition: 'center',
             backgroundSize: 'cover',
