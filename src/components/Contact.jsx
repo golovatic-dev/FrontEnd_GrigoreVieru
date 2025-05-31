@@ -18,7 +18,7 @@ function Contact() {
       <div
         className="relative h-[90vh] bg-cover bg-center"
         style={{
-          backgroundImage: "url('src/assets/campus/gimnaziu.jpg')",
+          backgroundImage: "url('src/assets/gymnasium.png')",
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
