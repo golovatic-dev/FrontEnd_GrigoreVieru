@@ -17,6 +17,7 @@ const Campus = () => {
     'src/assets/campus/gimnaziu_3.jpg',
     'src/assets/campus/gimnaziu_4.jpg',
     'src/assets/campus/gimnaziu_5.jpg',
+    'src/assets/campus/gimnaziu_6.png',
   ]
 
   const campusVideos = [
