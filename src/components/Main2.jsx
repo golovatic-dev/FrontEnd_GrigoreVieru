@@ -3,7 +3,7 @@ import React from 'react'
 function Main2() {
   const downloadBroucher = () => {
     const anchor = document.createElement('a')
-    anchor.href = 'src/assets/Brosura_Gimnaziul_Grigore_Vieru.pdf'
+    anchor.href = 'src/assets/brouchure/Brosura_Gimnaziul_Grigore_Vieru.pdf'
     anchor.download = 'brosura-gimnaziul-grigore-vieru.pdf'
     anchor.click()
   }
@@ -34,11 +34,11 @@ function Main2() {
           </div>
           <div className="lg:mt-0 mt-5 flex justify-center items-center">
             <a
-              href="https://gimnaziulsarataveche.educ.md/wp-content/uploads/2023/01/Brosura-Gimnaziul-Grigore-Vieru.pdf"
+              href="src/assets/brouchure/Brosura_Gimnaziul_Grigore_Vieru.pdf"
               download="brosura-gimnaziul-grigore-vieru.pdf"
             >
               <img
-                src="https://gimnaziulsarataveche.educ.md/wp-content/uploads/2023/01/Imagine-Gimnaziul-Grigore-Vieru.jpg"
+                src="src/assets/brouchure/brouchure_preview.png"
                 className="lg:w-full rounded-lg"
                 alt="Broșura Gimnaziului Grigore Vieru"
               />
