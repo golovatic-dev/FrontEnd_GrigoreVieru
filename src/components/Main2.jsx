@@ -3,8 +3,7 @@ import React from 'react'
 function Main2() {
   const downloadBroucher = () => {
     const anchor = document.createElement('a')
-    anchor.href =
-      'https://gimnaziulsarataveche.educ.md/wp-content/uploads/2023/01/Brosura-Gimnaziul-Grigore-Vieru.pdf'
+    anchor.href = 'src/assets/Brosura_Gimnaziul_Grigore_Vieru.pdf'
     anchor.download = 'brosura-gimnaziul-grigore-vieru.pdf'
     anchor.click()
   }
