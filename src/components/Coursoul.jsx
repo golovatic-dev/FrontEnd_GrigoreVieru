@@ -11,8 +11,7 @@ function Coursoul() {
         <div
           className="carousel-item active"
           style={{
-            backgroundImage:
-              "url('https://spskidz.com/assets/img/showcase/15.png')",
+            backgroundImage: "url('src/assets/carousel/gimnaziu.jpg')",
             backgroundRepeat: 'none',
             backgroundPosition: 'center',
             backgroundSize: 'cover',
@@ -34,8 +33,7 @@ function Coursoul() {
         <div
           className="carousel-item "
           style={{
-            backgroundImage:
-              "url('https://claireville.peelschools.org/images/fc89c99e-3415-4f95-8c22-f582241d485d')",
+            backgroundImage: "url('src/assets/carousel/carousel_1.png')",
             backgroundRepeat: 'none',
             backgroundPosition: 'center',
             backgroundSize: 'cover',
@@ -57,8 +55,7 @@ function Coursoul() {
         <div
           className="carousel-item "
           style={{
-            backgroundImage:
-              "url('https://i.ytimg.com/vi/DCQmllhzFHw/maxresdefault.jpg')",
+            backgroundImage: "url('src/assets/carousel/carousel_2.png')",
             backgroundRepeat: 'none',
             backgroundPosition: 'center',
             backgroundSize: 'cover',
