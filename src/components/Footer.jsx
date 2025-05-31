@@ -28,18 +28,22 @@ function Footer() {
               <h6 className="text-uppercase fw-bold mb-4">Contactați-ne</h6>
               <p>Email: contact@grigorevieru.edu</p>
               <h6 className="text-uppercase fw-bold mb-3 mt-3">Urmăriți-ne</h6>
-              <a href="" target="_blank" className="text-3xl text-pink-700">
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                className="text-3xl text-pink-700"
+              >
                 <InstagramIcon />
               </a>
               <a
-                href=""
+                href="https://www.x.com/"
                 target="_blank"
                 className="text-3xl text-blue-500 ml-3"
               >
                 <TwitterIcon />
               </a>
               <a
-                href=""
+                href="https://www.facebook.com/"
                 target="_blank"
                 className="text-3xl text-blue-700 ml-3"
               >
