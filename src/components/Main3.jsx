@@ -8,8 +8,7 @@ function Main3() {
       <div
         className="parallax-bg d-flex justify-content-center align-items-center bg-center bg-no-repeat"
         style={{
-          backgroundImage:
-            "url('https://cdn.pixabay.com/photo/2015/09/18/18/56/classroom-944493_960_720.jpg')", // imagine generică de școală
+          backgroundImage: "url('src/assets/main3_bg.png')",
         }}
       ></div>
       <div className="container-fluid bg-dark position-absolute text-light d-flex justify-content-center align-items-center h-100 w-100 bg-opacity-25">
@@ -27,7 +26,8 @@ function Main3() {
               </p>
               <span>
                 <Link
-                  to="/despre"
+                  to="/aboutus"
+                  onClick={() => window.scrollTo(0, 0)}
                   className="btn shadow-lg mt-5 fw-bold rounded-0 btn-primary"
                 >
                   Află mai mult <ArrowRightAltIcon />
@@ -37,7 +37,7 @@ function Main3() {
 
             <div className="hidden lg:flex justify-center">
               <img
-                src="https://cdn.pixabay.com/photo/2016/03/27/21/16/school-1280028_960_720.jpg" // imagine alternativă reprezentativă
+                src="src/assets/gymnasium.png"
                 alt="Imagine Gimnaziu"
                 className="shadow-lg rounded-4 w-[700px] h-[400px]"
               />
