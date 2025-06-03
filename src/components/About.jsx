@@ -1,21 +1,39 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const About = () => {
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true })
+  }, [])
+
   return (
     <div className="bg-gradient-to-b from-blue-50 to-white py-20">
       <div className="container mx-auto px-6">
         <div className="text-center mb-20">
-          <h1 className="text-5xl font-bold mb-6 text-blue-800">
+          <h1
+            className="text-5xl font-bold mb-6 text-blue-800"
+            data-aos="zoom-in"
+            data-aos-duration="1200"
+          >
             Gimnaziul Grigore Vieru
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p
+            className="text-xl text-gray-600 max-w-3xl mx-auto"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             Formăm minți tinere și pregătim liderii de mâine din 1972
           </p>
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-between mb-20">
-          <div className="md:w-1/2 mb-10 md:mb-0">
+          <div
+            className="md:w-1/2 mb-10 md:mb-0"
+            data-aos="fade-right"
+            data-aos-delay="100"
+          >
             <h2 className="text-3xl font-semibold mb-6 text-blue-700">
               Despre Noi
             </h2>
@@ -27,7 +45,11 @@ const About = () => {
               necesar pentru a-și atinge întregul potențial.
             </p>
           </div>
-          <div className="md:w-1/2 md:pl-10">
+          <div
+            className="md:w-1/2 md:pl-10"
+            data-aos="fade-left"
+            data-aos-delay="200"
+          >
             <img
               src="src/assets/campus/campus_old.png"
               alt="Campusul gimnaziului"
@@ -36,7 +58,11 @@ const About = () => {
           </div>
         </div>
 
-        <div className="bg-white p-10 rounded-xl shadow-lg">
+        <div
+          className="bg-white p-10 rounded-xl shadow-lg"
+          data-aos="flip-up"
+          data-aos-delay="300"
+        >
           <h2 className="text-3xl font-semibold mb-6 text-blue-700 text-center">
             Moștenirea Noastră
           </h2>
@@ -50,7 +76,11 @@ const About = () => {
           </p>
         </div>
 
-        <div className="mt-20 text-center">
+        <div
+          className="mt-20 text-center"
+          data-aos="zoom-in-up"
+          data-aos-delay="400"
+        >
           <Link
             to="/events"
             className="bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition duration-300"
