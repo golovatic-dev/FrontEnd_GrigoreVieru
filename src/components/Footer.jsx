@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import InstagramIcon from '@mui/icons-material/Instagram'
 import TwitterIcon from '@mui/icons-material/Twitter'
 import FacebookIcon from '@mui/icons-material/Facebook'
 
 function Footer() {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true })
+  }, [])
+
   return (
     <footer className="text-center text-lg-start text-muted">
       <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
@@ -13,7 +19,10 @@ function Footer() {
       <section className="">
         <div className="container text-center text-md-start mt-5">
           <div className="row mt-3">
-            <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <div
+              className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4"
+              data-aos="fade-right"
+            >
               <h6 className="text-uppercase fw-bold mb-4">
                 Gimnaziul Sarata Veche
               </h6>
@@ -24,7 +33,10 @@ function Footer() {
                 5947.
               </p>
             </div>
-            <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <div
+              className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4"
+              data-aos="fade-up"
+            >
               <h6 className="text-uppercase fw-bold mb-4">Contactați-ne</h6>
               <p>Email: contact@grigorevieru.edu</p>
               <h6 className="text-uppercase fw-bold mb-3 mt-3">Urmăriți-ne</h6>
@@ -32,6 +44,8 @@ function Footer() {
                 href="https://www.instagram.com/"
                 target="_blank"
                 className="text-3xl text-pink-700"
+                data-aos="zoom-in"
+                data-aos-delay="100"
               >
                 <InstagramIcon />
               </a>
@@ -39,6 +53,8 @@ function Footer() {
                 href="https://www.x.com/"
                 target="_blank"
                 className="text-3xl text-blue-500 ml-3"
+                data-aos="zoom-in"
+                data-aos-delay="200"
               >
                 <TwitterIcon />
               </a>
@@ -46,11 +62,16 @@ function Footer() {
                 href="https://www.facebook.com/"
                 target="_blank"
                 className="text-3xl text-blue-700 ml-3"
+                data-aos="zoom-in"
+                data-aos-delay="300"
               >
                 <FacebookIcon />
               </a>
             </div>
-            <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <div
+              className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4"
+              data-aos="fade-left"
+            >
               <h6 className="text-uppercase fw-bold mb-4">Suport</h6>
               <div className="flex flex-col gap-3">
                 <p>
