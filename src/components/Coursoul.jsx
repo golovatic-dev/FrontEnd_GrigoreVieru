@@ -1,6 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 function Coursoul() {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: false })
+  }, [])
+
   return (
     <div
       id="carouselExampleAutoplaying"
@@ -19,7 +25,10 @@ function Coursoul() {
         >
           <div className="h-[25rem] lg:h-[40rem]">
             <div className="bg-dark bg-opacity-50 w-100 h-100 d-flex flex-column justify-content-center align-items-center">
-              <div className="  d-flex flex-column justify-content-center align-items-center ">
+              <div
+                className="d-flex flex-column justify-content-center align-items-center"
+                data-aos="fade-up"
+              >
                 <h1 className="text-xl lg:text-5xl text-center fw-bold gap-2 flex flex-col lg:flex-row text-light ">
                   <span>Gimnaziul Grigore Vieru</span>
                 </h1>
@@ -31,7 +40,7 @@ function Coursoul() {
           </div>
         </div>
         <div
-          className="carousel-item "
+          className="carousel-item"
           style={{
             backgroundImage: "url('src/assets/carousel/carousel_1.png')",
             backgroundRepeat: 'none',
@@ -40,8 +49,11 @@ function Coursoul() {
           }}
         >
           <div className="h-[25rem] lg:h-[40rem]">
-            <div className="bg-dark bg-opacity-50 w-100 h-100 d-flex flex-column justify-content-center align-items-center ">
-              <div className="  d-flex flex-column justify-content-center align-items-center ">
+            <div className="bg-dark bg-opacity-50 w-100 h-100 d-flex flex-column justify-content-center align-items-center">
+              <div
+                className="d-flex flex-column justify-content-center align-items-center"
+                data-aos="fade-left"
+              >
                 <h1 className="text-xl lg:text-5xl text-center fw-bold gap-2 flex flex-col lg:flex-row text-light ">
                   <span>Gimnaziul Grigore Vieru</span>
                 </h1>
@@ -53,7 +65,7 @@ function Coursoul() {
           </div>
         </div>
         <div
-          className="carousel-item "
+          className="carousel-item"
           style={{
             backgroundImage: "url('src/assets/carousel/carousel_2.png')",
             backgroundRepeat: 'none',
@@ -63,7 +75,10 @@ function Coursoul() {
         >
           <div className="h-[25rem] lg:h-[40rem]">
             <div className="bg-dark bg-opacity-50 w-100 h-100 d-flex flex-column justify-content-center align-items-center">
-              <div className="  d-flex flex-column justify-content-center align-items-center ">
+              <div
+                className="d-flex flex-column justify-content-center align-items-center"
+                data-aos="fade-right"
+              >
                 <h1 className="text-xl lg:text-5xl text-center fw-bold gap-2 flex flex-col lg:flex-row text-light ">
                   <span>Gimnaziul Grigore Vieru</span>
                 </h1>
