@@ -17,8 +17,9 @@ function Checkout() {
             className="w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] shadow-lg rounded-5"
           />
         </div>
-        <div className="w-full flex flex-col gap-2 lg:gap-5 justify-center ">
-          <div className="flex text-center lg:text-start flex-col lg:p-0 p-3">
+        3
+        <div className="w-full flex flex-col gap-2 lg:gap-5 justify-center items ">
+          <div className="flex text-left flex-col lg:p-0 p-3">
             <span className="text-xl lg:text-3xl font-bold lg:mb-3">
               Premii Speciale de Recunoaștere
             </span>
