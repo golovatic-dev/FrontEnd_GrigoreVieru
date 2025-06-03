@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const eventsData = [
   {
@@ -77,6 +79,10 @@ const Events = () => {
     'Evenimente Educaționale'
   )
 
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true })
+  }, [])
+
   const handleCategoryClick = (category) => {
     setActiveCategory(category)
   }
@@ -91,6 +97,8 @@ const Events = () => {
           <div
             key={index}
             className="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+            data-aos="zoom-in"
+            data-aos-delay={index * 100}
           >
             <div className="p-6">
               <h4 className="text-xl font-bold mb-2 text-indigo-700">
@@ -118,10 +126,17 @@ const Events = () => {
 
   return (
     <div className="container mx-auto px-4 py-16">
-      <h2 className="text-4xl font-bold text-center mb-12 text-indigo-900">
+      <h2
+        className="text-4xl font-bold text-center mb-12 text-indigo-900"
+        data-aos="fade-down"
+      >
         Evenimente Viitoare
       </h2>
-      <div className="flex flex-wrap justify-center gap-4 mb-12">
+      <div
+        className="flex flex-wrap justify-center gap-4 mb-12"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
         {eventsData.map((data, index) => (
           <button
             key={index}
@@ -136,7 +151,9 @@ const Events = () => {
           </button>
         ))}
       </div>
-      {renderEvents()}
+      <div data-aos="fade-up" data-aos-delay="200">
+        {renderEvents()}
+      </div>
     </div>
   )
 }
