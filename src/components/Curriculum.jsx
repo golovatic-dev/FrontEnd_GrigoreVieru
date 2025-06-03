@@ -1,10 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const Curriculum = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true })
+  }, [])
+
   return (
     <div className="bg-gradient-to-b from-blue-50 to-white py-20">
       <div className="container mx-auto px-6">
-        <h1 className="text-5xl font-bold text-center mb-16 text-blue-900">
+        <h1
+          className="text-5xl font-bold text-center mb-16 text-blue-900"
+          data-aos="fade-down"
+        >
           Curriculumul Nostru
         </h1>
 
@@ -59,6 +68,8 @@ const Curriculum = () => {
             <div
               key={index}
               className="bg-white rounded-xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
+              data-aos="zoom-in"
+              data-aos-delay={index * 100}
             >
               <div className={`${nivel.color} py-4 px-6`}>
                 <h3 className="text-2xl font-bold text-white">{nivel.title}</h3>
@@ -95,6 +106,8 @@ const Curriculum = () => {
             <div
               key={index}
               className="bg-white rounded-xl shadow-xl p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
+              data-aos="fade-up"
+              data-aos-delay={index * 150}
             >
               <div className="flex items-center mb-4">
                 <span className="text-4xl mr-4">{item.icon}</span>
