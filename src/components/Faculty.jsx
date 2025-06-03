@@ -4,37 +4,107 @@ const aboutData = [
   {
     name: 'Aliona Railean',
     description: 'Director',
-    image: 'https://via.placeholder.com/150', // Înlocuiește cu o imagine reală dacă este disponibilă
+    image: 'src/assets/teachers/d_aliona.jpg',
     quote:
       'Bine ați venit în comunitatea noastră școlară! Ne dedicăm creării unui mediu prietenos care promovează dezvoltarea academică și personală.',
   },
   {
     name: 'Zinaida Țurcan',
     description: 'Director adjunct',
-    image: 'https://via.placeholder.com/150', // Înlocuiește cu o imagine reală dacă este disponibilă
+    image: 'src/assets/teachers/d_zinaida.jpg',
     quote:
       'Împreună putem atinge excelența. Să colaborăm pentru a construi un mediu școlar prosper.',
   },
   {
-    name: 'Emilia Caras',
+    name: 'Svetlana Golovatic',
     description: 'Profesor de limba română',
-    image: 'https://via.placeholder.com/150', // Înlocuiește cu o imagine reală dacă este disponibilă
+    image: 'src/assets/teachers/d_svetlana.jpg',
     quote:
       'Limba română este sufletul culturii noastre. Să o explorăm și să o iubim împreună.',
   },
   {
-    name: 'Cristian Lipcanu',
-    description: 'Profesor de muzică',
-    image: 'https://via.placeholder.com/150', // Înlocuiește cu o imagine reală dacă este disponibilă
+    name: 'Angela Railean',
+    description: 'Profesor de matematică și informatică',
+    image: 'src/assets/teachers/d_angela.jpg',
     quote:
       'Muzica este limbajul universal al emoțiilor. Să descoperim armonia împreună.',
   },
   {
-    name: 'Anatolie Poperecinîi',
+    name: 'Nicolae Popa',
     description: 'Profesor de fizică și educație tehnologică',
-    image: 'https://via.placeholder.com/150', // Înlocuiește cu o imagine reală dacă este disponibilă
+    image: 'src/assets/teachers/teacher_male.png',
     quote:
       'Știința ne deschide uși către înțelegerea lumii. Să explorăm universul cunoașterii împreună.',
+  },
+  {
+    name: 'Maria Balan',
+    description: 'Profesor de matematică',
+    image: 'src/assets/teachers/teacher.png',
+    quote:
+      'Matematica dezvoltă gândirea logică și creativitatea. Să rezolvăm împreună misterele numerelor!',
+  },
+  {
+    name: 'Ion Cebotari',
+    description: 'Profesor de istorie',
+    image: 'src/assets/teachers/teacher_male.png',
+    quote:
+      'Istoria ne ajută să înțelegem cine suntem. Să descoperim împreună trecutul nostru bogat.',
+  },
+  {
+    name: 'Elena Rusu',
+    description: 'Profesor de limba engleză',
+    image: 'src/assets/teachers/teacher.png',
+    quote:
+      'Limba engleză deschide porți către lume. Învățăm împreună să comunicăm global!',
+  },
+  {
+    name: 'Vasile Munteanu',
+    description: 'Profesor de educație fizică',
+    image: 'src/assets/teachers/teacher_male.png',
+    quote:
+      'Mișcarea este cheia sănătății. Să fim activi și plini de energie în fiecare zi!',
+  },
+  {
+    name: 'Natalia Grosu',
+    description: 'Profesor de biologie',
+    image: 'src/assets/teachers/teacher.png',
+    quote:
+      'Biologia ne învață să prețuim viața în toate formele ei. Să explorăm natura împreună!',
+  },
+  {
+    name: 'Sergiu Rotaru',
+    description: 'Profesor de geografie',
+    image: 'src/assets/teachers/teacher_male.png',
+    quote:
+      'Geografia ne arată frumusețea și diversitatea lumii. Să călătorim cu mintea și inima!',
+  },
+  {
+    name: 'Tatiana Cazacu',
+    description: 'Profesor de chimie',
+    image: 'src/assets/teachers/teacher.png',
+    quote:
+      'Chimia este magia științei. Să descoperim reacțiile fascinante ale lumii!',
+  },
+  {
+    name: 'Olesea Lungu',
+    description: 'Profesor de informatică',
+    image: 'src/assets/teachers/teacher.png',
+    quote:
+      'Tehnologia modelează viitorul. Învățăm să programăm și să inovăm împreună!',
+  },
+  {
+    name: 'Mihai Ursu',
+    description: 'Profesor de educație civică',
+    image: 'src/assets/teachers/teacher_male.png',
+    quote:
+      'Educația civică formează cetățeni responsabili. Să construim o societate mai bună!',
+  },
+  {
+    name: 'Veronica Sârbu',
+    description: 'Profesor de arte plastice',
+    image: 'src/assets/teachers/teacher.png',
+    quote:
+      'Arta ne ajută să exprimăm ceea ce simțim. Să colorăm lumea cu imaginație!',
   },
 ]
 
@@ -113,7 +183,7 @@ function Faculty() {
                 className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105"
               >
                 <img
-                  className="h-56 w-full object-cover"
+                  className="h-56 w-full object-cover object-top"
                   src={data.image}
                   alt={data.name}
                 />
