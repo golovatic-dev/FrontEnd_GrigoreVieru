@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const aboutData = [
   {
@@ -109,6 +111,10 @@ const aboutData = [
 ]
 
 function Faculty() {
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true })
+  }, [])
+
   const director = aboutData.find((member) => member.description === 'Director')
   const adjunct = aboutData.find(
     (member) => member.description === 'Director adjunct'
@@ -119,13 +125,20 @@ function Faculty() {
 
   return (
     <div className="container mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold text-center mb-16 text-indigo-800">
+      <h1
+        className="text-4xl font-bold text-center mb-16 text-indigo-800"
+        data-aos="fade-right"
+        data-aos-duration="1200"
+      >
         Cadrele Didactice
       </h1>
 
       <div className="grid md:grid-cols-2 gap-8 mb-16">
         {director && (
-          <div className="rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+          <div
+            className="rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105"
+            data-aos="fade-up"
+          >
             <div className="md:flex">
               <div className="md:flex-shrink-0">
                 <img
@@ -148,7 +161,11 @@ function Faculty() {
         )}
 
         {adjunct && (
-          <div className="rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+          <div
+            className="rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <div className="md:flex">
               <div className="md:flex-shrink-0">
                 <img
@@ -173,7 +190,11 @@ function Faculty() {
 
       {otherFaculty.length > 0 && (
         <div>
-          <h2 className="text-3xl font-bold mb-8 text-center text-indigo-800">
+          <h2
+            className="text-3xl font-bold mb-8 text-center text-indigo-800"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
             Profesori Dedicati
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -181,6 +202,8 @@ function Faculty() {
               <div
                 key={index}
                 className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105"
+                data-aos="fade-up"
+                data-aos-delay={100 * (index + 1)}
               >
                 <img
                   className="h-56 w-full object-cover object-top"
