@@ -1,4 +1,6 @@
-import React, { useRef } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import React, { useEffect, useRef } from 'react'
 import emailjs from '@emailjs/browser'
 import { useNavigate } from 'react-router-dom'
 import { AccessTime, LocationOn, GetApp } from '@mui/icons-material'
@@ -6,6 +8,10 @@ import { AccessTime, LocationOn, GetApp } from '@mui/icons-material'
 function Contact() {
   const form = useRef()
   const navigate = useNavigate()
+
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true })
+  }, [])
 
   const sendEmail = async (e) => {
     e.preventDefault()
@@ -27,6 +33,7 @@ function Contact() {
               ref={form}
               onSubmit={sendEmail}
               className="bg-white bg-opacity-95 max-w-2xl mx-auto p-10 rounded-3xl shadow-2xl transform hover:scale-105 transition duration-300"
+              data-aos="fade-up"
             >
               <h2 className="text-5xl font-extrabold mb-8 text-center text-blue-800 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400">
                 Contactează-ne
@@ -56,12 +63,15 @@ function Contact() {
         </div>
       </div>
 
-      <div className="container mx-auto py-20 px-6">
+      <div className="container mx-auto py-20 px-6" data-aos="fade-up">
         <h2 className="text-5xl font-extrabold mb-16 text-center text-blue-900 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400">
           Ia legătura cu noi
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <div className="p-8 bg-white shadow-xl rounded-3xl hover:shadow-2xl transition duration-300 transform hover:scale-105 text-center">
+          <div
+            className="p-8 bg-white shadow-xl rounded-3xl hover:shadow-2xl transition duration-300 transform hover:scale-105 text-center"
+            data-aos="fade-right"
+          >
             <AccessTime
               className="text-5xl text-blue-500 mb-6 mx-auto "
               style={{ fontSize: '3rem' }}
@@ -73,7 +83,10 @@ function Contact() {
             <p className="text-gray-600">Sâmbătă: Închis</p>
             <p className="text-gray-600">Duminică: Închis</p>
           </div>
-          <div className="p-8 bg-white shadow-xl rounded-3xl hover:shadow-2xl transition duration-300 transform hover:scale-105 text-center">
+          <div
+            className="p-8 bg-white shadow-xl rounded-3xl hover:shadow-2xl transition duration-300 transform hover:scale-105 text-center"
+            data-aos="fade-left"
+          >
             <LocationOn
               className="text-5xl text-blue-500 mb-6 mx-auto"
               style={{ fontSize: '3rem' }}
@@ -86,13 +99,16 @@ function Contact() {
         </div>
       </div>
 
-      <div className="bg-blue-50 py-20 px-6">
+      <div className="bg-blue-50 py-20 px-6" data-aos="fade-up">
         <div className="container mx-auto">
           <h2 className="text-5xl font-extrabold text-center mb-16 text-blue-900 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400">
             Informații Admitere
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            <div className="p-8 bg-white shadow-xl rounded-3xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
+            <div
+              className="p-8 bg-white shadow-xl rounded-3xl hover:shadow-2xl transition duration-300 transform hover:scale-105"
+              data-aos="zoom-in"
+            >
               <h3 className="text-2xl font-semibold mb-4 text-blue-800">
                 Procesul de Admitere
               </h3>
@@ -110,7 +126,11 @@ function Contact() {
                 Descarcă formularul
               </a>
             </div>
-            <div className="p-8 bg-white shadow-xl rounded-3xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
+            <div
+              className="p-8 bg-white shadow-xl rounded-3xl hover:shadow-2xl transition duration-300 transform hover:scale-105"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
               <h3 className="text-2xl font-semibold mb-4 text-blue-800">
                 Criterii
               </h3>
@@ -120,7 +140,11 @@ function Contact() {
                 clase.
               </p>
             </div>
-            <div className="p-8 bg-white shadow-xl rounded-3xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
+            <div
+              className="p-8 bg-white shadow-xl rounded-3xl hover:shadow-2xl transition duration-300 transform hover:scale-105"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
               <h3 className="text-2xl font-semibold mb-4 text-blue-800">
                 Date Importante
               </h3>
@@ -135,11 +159,14 @@ function Contact() {
         </div>
       </div>
 
-      <div className="container mx-auto py-20 px-6">
+      <div className="container mx-auto py-20 px-6" data-aos="fade-up">
         <h2 className="text-5xl font-extrabold text-center mb-16 text-blue-900 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400">
           Găsește-ne pe hartă
         </h2>
-        <div className="rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition duration-300">
+        <div
+          className="rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition duration-300"
+          data-aos="zoom-in"
+        >
           <iframe
             title="Google Maps"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d851.9392299564225!2d27.737120290261473!3d47.50312698273704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40cb153e9c55c679%3A0x150cfc698d7d6c20!2sGimnaziul%20%22Grigore%20Vieru%22%20sat%20Sarata%20Veche!5e1!3m2!1sen!2s!4v1748263399481!5m2!1sen!2s"
