@@ -1,7 +1,8 @@
 import { Cancel } from '@mui/icons-material'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Modal from 'react-modal'
-
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import 'react-lazy-load-image-component/src/effects/blur.css'
 
 Modal.setAppElement('#root')
@@ -10,6 +11,10 @@ const Campus = () => {
   const [selectedImage, setSelectedImage] = useState(null)
   const [selectedVideo, setSelectedVideo] = useState(null)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
+
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true })
+  }, [])
 
   const campusImages = [
     'src/assets/campus/gimnaziu.jpg',
@@ -64,15 +69,25 @@ const Campus = () => {
     <div className="bg-gray-100 py-16">
       <div className="container mx-auto text-center px-4">
         <section>
-          <h2 className="text-3xl lg:text-5xl font-bold mb-8 text-indigo-700">
+          <h2
+            className="text-3xl lg:text-5xl font-bold mb-8 text-indigo-700"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+          >
             Prezentarea Campusului
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
+          <div
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             {campusImages.map((imageUrl, index) => (
               <div
                 key={index}
                 className="relative overflow-hidden bg-white rounded-lg shadow-md cursor-pointer hover:shadow-lg transform hover:scale-105 transition-all duration-300"
-                onClick={() => openImageModal(imageUrl)}
+                onClick={() => openImageModal(imageUrl, index)}
+                data-aos="flip-left"
+                data-aos-delay={100 * index}
               >
                 <img
                   src={imageUrl}
@@ -88,15 +103,25 @@ const Campus = () => {
           </div>
         </section>
         <section className="mb-16">
-          <h2 className="text-3xl lg:text-5xl font-bold mb-8 mt-8 text-indigo-700">
+          <h2
+            className="text-3xl lg:text-5xl font-bold mb-8 mt-8 text-indigo-700"
+            data-aos="zoom-in"
+            data-aos-delay="300"
+          >
             Prezentări Video din Campus
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
             {campusVideos.map((videoUrl, index) => (
               <div
                 key={index}
                 className="relative overflow-hidden bg-white rounded-lg shadow-lg cursor-pointer transition-transform transform hover:scale-105 "
                 onClick={() => openVideoModal(videoUrl)}
+                data-aos="flip-up"
+                data-aos-delay={100 * index}
               >
                 <div className="h-[300px]">
                   <iframe
