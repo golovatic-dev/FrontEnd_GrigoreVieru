@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 import { Link } from 'react-router-dom'
 import { Menu } from '@mui/icons-material'
@@ -13,16 +15,32 @@ function Navbar() {
   }
   const location = useLocation()
 
+  useEffect(() => {
+    AOS.init({ once: true })
+  }, [])
+
   return (
     <nav className="w-[100vw]">
       <div className="container-fluid ">
-        <div className="row hidden lg:flex lg:items-center lg:justify-between p-3 text-white bg-gradient-to-br from-indigo-800 to-gray-800">
-          <div className="col-6 d-flex items-center">
+        <div
+          className="row hidden lg:flex lg:items-center lg:justify-between p-3 text-white bg-gradient-to-br from-indigo-800 to-gray-800"
+          data-aos="fade-down"
+          data-aos-delay="0"
+        >
+          <div
+            className="col-6 d-flex items-center"
+            data-aos="fade-right"
+            data-aos-delay="100"
+          >
             <h5 className="fw-bold ">
               Site-ul școlii gimnaziale din Satul Sărata Veche
             </h5>
           </div>
-          <div className="col-6 d-flex justify-content-end">
+          <div
+            className="col-6 d-flex justify-content-end"
+            data-aos="fade-left"
+            data-aos-delay="200"
+          >
             <a
               href="https://www.linkedin.com/in/daniel-golovatic-8621a5308/"
               target="_blank"
@@ -30,14 +48,18 @@ function Navbar() {
             >
               Visit My LinkedIn Profile
             </a>
-
             <span className="d-flex justify-content-safe"></span>
           </div>
         </div>
 
         <div className="lg:h-fit p-0 row navbar navbar-expand-lg d-flex bg-light ">
           <div className="container-fluid ">
-            <Link to="/" className="navbar-brand flex items-center">
+            <Link
+              to="/"
+              className="navbar-brand flex items-center"
+              data-aos="fade-right"
+              data-aos-delay="300"
+            >
               <img
                 src="src/assets/logo.png"
                 alt=""
@@ -55,7 +77,12 @@ function Navbar() {
 
             <div className="flex " id="navbarNav">
               <ul className="navbar-nav hidden lg:flex align-items-center ">
-                <Link to="/" className="nav-item">
+                <Link
+                  to="/"
+                  className="nav-item"
+                  data-aos="fade-left"
+                  data-aos-delay="0"
+                >
                   <a
                     className={`nav-link ${
                       location.pathname === '/' ? 'nav-active' : ''
@@ -64,7 +91,12 @@ function Navbar() {
                     ACASĂ
                   </a>
                 </Link>
-                <Link to="/aboutus" className="nav-item me-3">
+                <Link
+                  to="/aboutus"
+                  className="nav-item me-3"
+                  data-aos="fade-left"
+                  data-aos-delay="100"
+                >
                   <a
                     className={`nav-link ${
                       location.pathname === '/aboutus' ? 'nav-active' : ''
@@ -73,7 +105,12 @@ function Navbar() {
                     DESPRE NOI
                   </a>
                 </Link>
-                <Link to="/faculty" className="nav-item">
+                <Link
+                  to="/faculty"
+                  className="nav-item"
+                  data-aos="fade-left"
+                  data-aos-delay="200"
+                >
                   <a
                     className={`nav-link ${
                       location.pathname === '/faculty' ? 'nav-active' : ''
@@ -82,7 +119,12 @@ function Navbar() {
                     ACTIVITĂȚI
                   </a>
                 </Link>
-                <Link to="/students" className="nav-item">
+                <Link
+                  to="/students"
+                  className="nav-item"
+                  data-aos="fade-left"
+                  data-aos-delay="300"
+                >
                   <a
                     className={`nav-link ${
                       location.pathname === '/students' ? 'nav-active' : ''
@@ -91,27 +133,40 @@ function Navbar() {
                     ELEVI
                   </a>
                 </Link>
-                <Link to="/events" className="nav-item me-3">
+                <Link
+                  to="/events"
+                  className="nav-item me-3"
+                  data-aos="fade-left"
+                  data-aos-delay="400"
+                >
                   <a
                     className={`nav-link ${
                       location.pathname === '/events' ? 'nav-active' : ''
                     }`}
                   >
-                    {' '}
                     EVENIMENTE
                   </a>
                 </Link>
-                <Link to="/curriculum" className="nav-item me-3">
+                <Link
+                  to="/curriculum"
+                  className="nav-item me-3"
+                  data-aos="fade-left"
+                  data-aos-delay="500"
+                >
                   <a
                     className={`nav-link ${
                       location.pathname === '/curriculum' ? 'nav-active' : ''
                     }`}
                   >
-                    {' '}
                     ACADEMICE
                   </a>
                 </Link>
-                <Link to="/moto" className="nav-item me-3">
+                <Link
+                  to="/moto"
+                  className="nav-item me-3"
+                  data-aos="fade-left"
+                  data-aos-delay="600"
+                >
                   <a
                     className={`nav-link ${
                       location.pathname === '/moto' ? 'nav-active' : ''
@@ -120,7 +175,12 @@ function Navbar() {
                     MISIUNI
                   </a>
                 </Link>
-                <Link to="/campus" className="nav-item me-3">
+                <Link
+                  to="/campus"
+                  className="nav-item me-3"
+                  data-aos="fade-left"
+                  data-aos-delay="700"
+                >
                   <a
                     className={`nav-link ${
                       location.pathname === '/campus' ? 'nav-active' : ''
@@ -129,8 +189,11 @@ function Navbar() {
                     OBSERVĂ
                   </a>
                 </Link>
-
-                <li className="nav-item  me-3 contactListBtn">
+                <li
+                  className="nav-item  me-3 contactListBtn"
+                  data-aos="fade-left"
+                  data-aos-delay="800"
+                >
                   <button className="btn  shadow btn-primary">
                     <Link
                       to="/contact"
@@ -147,6 +210,7 @@ function Navbar() {
                   onClick={() => setIsOpen(true)}
                 />
               </div>
+              {/* Mobile nav: no AOS attributes here */}
               <div
                 className={`fixed top-0 right-0 h-full bg-gray-800 text-white p-4 w-64 transform ${
                   isOpen ? 'translate-x-0' : 'translate-x-full'
