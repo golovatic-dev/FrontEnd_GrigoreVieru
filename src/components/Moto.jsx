@@ -1,15 +1,28 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import { Lightbulb, Group, ThumbUp } from '@mui/icons-material'
 
 const Moto = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true })
+  }, [])
+
   return (
     <div className="bg-gradient-to-b from-blue-50 to-white py-20">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold mb-6 text-blue-900">
+          <h1
+            className="text-5xl font-bold mb-6 text-blue-900"
+            data-aos="fade-down"
+          >
             Misiunea Noastră & Motto
           </h1>
-          <p className="text-2xl font-semibold text-blue-700">
+          <p
+            className="text-2xl font-semibold text-blue-700"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             Provocă-te pe Tine Însuți, Inspiră Excelență
           </p>
         </div>
@@ -19,6 +32,8 @@ const Moto = () => {
             <div
               key={index}
               className="bg-white rounded-xl shadow-xl p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
+              data-aos="zoom-in"
+              data-aos-delay={index * 150}
             >
               <div className="flex items-center justify-center mb-6">
                 <div className="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center">
@@ -37,7 +52,11 @@ const Moto = () => {
           ))}
         </div>
 
-        <div className="bg-white rounded-xl shadow-xl p-8">
+        <div
+          className="bg-white rounded-xl shadow-xl p-8"
+          data-aos="fade-up"
+          data-aos-delay="500"
+        >
           <h2 className="text-3xl font-bold mb-6 text-blue-800 text-center">
             Misiunea Noastră
           </h2>
