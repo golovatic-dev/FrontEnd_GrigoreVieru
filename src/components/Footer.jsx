@@ -44,8 +44,6 @@ function Footer() {
                 href="https://www.instagram.com/"
                 target="_blank"
                 className="text-3xl text-pink-700"
-                data-aos="zoom-in"
-                data-aos-delay="100"
               >
                 <InstagramIcon />
               </a>
@@ -53,8 +51,6 @@ function Footer() {
                 href="https://www.x.com/"
                 target="_blank"
                 className="text-3xl text-blue-500 ml-3"
-                data-aos="zoom-in"
-                data-aos-delay="200"
               >
                 <TwitterIcon />
               </a>
@@ -62,8 +58,6 @@ function Footer() {
                 href="https://www.facebook.com/"
                 target="_blank"
                 className="text-3xl text-blue-700 ml-3"
-                data-aos="zoom-in"
-                data-aos-delay="300"
               >
                 <FacebookIcon />
               </a>
