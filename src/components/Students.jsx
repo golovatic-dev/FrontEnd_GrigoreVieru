@@ -1,17 +1,39 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const Students = () => {
+  useEffect(() => {
+    AOS.init({ once: true })
+  }, [])
+
   return (
     <div className="container mx-auto px-4 py-16 bg-gray-100">
-      <h1 className="text-5xl font-bold text-center mb-16 text-indigo-800">
+      <h1
+        className="text-5xl font-bold text-center mb-16 text-indigo-800"
+        data-aos="fade-down"
+        data-aos-delay="0"
+      >
         Viața Elevilor la Gimnaziul Grigore Vieru
       </h1>
 
-      <section className="mb-20 bg-white rounded-xl shadow-lg p-8">
-        <h2 className="text-3xl font-semibold mb-6 text-center text-indigo-700">
+      <section
+        className="mb-20 bg-white rounded-xl shadow-lg p-8"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        <h2
+          className="text-3xl font-semibold mb-6 text-center text-indigo-700"
+          data-aos="fade-right"
+          data-aos-delay="200"
+        >
           Activități Extrașcolare
         </h2>
-        <p className="text-xl text-gray-600 text-center mb-8">
+        <p
+          className="text-xl text-gray-600 text-center mb-8"
+          data-aos="fade-right"
+          data-aos-delay="250"
+        >
           Elevii noștri participă la diverse activități extrașcolare, printre
           care:
         </p>
@@ -29,6 +51,8 @@ const Students = () => {
             <div
               key={index}
               className="bg-indigo-100 rounded-lg p-4 text-center"
+              data-aos="fade-up"
+              data-aos-delay="300"
             >
               <span className="text-lg font-medium text-indigo-700">
                 {activitate}
@@ -38,11 +62,23 @@ const Students = () => {
         </div>
       </section>
 
-      <section className="mb-20 bg-white rounded-xl shadow-lg p-8">
-        <h2 className="text-3xl font-semibold mb-6 text-center text-indigo-700">
+      <section
+        className="mb-20 bg-white rounded-xl shadow-lg p-8"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <h2
+          className="text-3xl font-semibold mb-6 text-center text-indigo-700"
+          data-aos="fade-right"
+          data-aos-delay="300"
+        >
           Cercuri și Cluburi
         </h2>
-        <p className="text-xl text-gray-600 text-center mb-8">
+        <p
+          className="text-xl text-gray-600 text-center mb-8"
+          data-aos="fade-right"
+          data-aos-delay="350"
+        >
           Elevii pot participa la diverse cercuri și cluburi pentru a-și explora
           pasiunile:
         </p>
@@ -56,6 +92,8 @@ const Students = () => {
             <div
               key={index}
               className="bg-green-100 rounded-lg p-4 text-center"
+              data-aos="zoom-in"
+              data-aos-delay={400 + index * 100}
             >
               <span className="text-lg font-medium text-green-700">{club}</span>
             </div>
@@ -63,11 +101,19 @@ const Students = () => {
         </div>
       </section>
 
-      <section className="mb-20">
-        <h2 className="text-3xl font-semibold mb-6 text-center text-indigo-700">
+      <section className="mb-20" data-aos="fade-up" data-aos-delay="300">
+        <h2
+          className="text-3xl font-semibold mb-6 text-center text-indigo-700"
+          data-aos="fade-right"
+          data-aos-delay="400"
+        >
           Reușite
         </h2>
-        <div className="bg-white p-8 rounded-xl shadow-lg">
+        <div
+          className="bg-white p-8 rounded-xl shadow-lg"
+          data-aos="zoom-in"
+          data-aos-delay="450"
+        >
           <ul className="space-y-4">
             {[
               {
@@ -83,7 +129,12 @@ const Students = () => {
                 achievement: 'Locul I la Concursul Interșcolar de Robotică',
               },
             ].map((item, index) => (
-              <li key={index} className="flex items-center">
+              <li
+                key={index}
+                className="flex items-center"
+                data-aos="fade-left"
+                data-aos-delay={500 + index * 100}
+              >
                 <span className="w-3 h-3 bg-yellow-400 rounded-full mr-3"></span>
                 <span className="font-semibold text-gray-800">
                   {item.name}:
@@ -95,8 +146,12 @@ const Students = () => {
         </div>
       </section>
 
-      <section>
-        <h2 className="text-3xl font-semibold mb-6 text-center text-indigo-700">
+      <section data-aos="fade-up" data-aos-delay="400">
+        <h2
+          className="text-3xl font-semibold mb-6 text-center text-indigo-700"
+          data-aos="fade-right"
+          data-aos-delay="500"
+        >
           Consiliul Elevilor
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
@@ -126,6 +181,8 @@ const Students = () => {
             <div
               key={index}
               className="bg-white p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+              data-aos="zoom-in-up"
+              data-aos-delay={120}
             >
               <h3 className="text-xl font-semibold text-indigo-700 mb-2">
                 {member.role}
