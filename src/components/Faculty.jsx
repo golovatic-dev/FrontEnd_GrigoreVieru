@@ -29,7 +29,7 @@ const aboutData = [
     description: 'Profesor de matematică și informatică',
     image: 'src/assets/teachers/d_angela.jpg',
     quote:
-      'Muzica este limbajul universal al emoțiilor. Să descoperim armonia împreună.',
+      'Matematica și informatica ne învață să gândim logic și creativ. Împreună descoperim soluții pentru orice provocare!',
   },
   {
     name: 'Nicolae Popa',
