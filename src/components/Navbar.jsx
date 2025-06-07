@@ -116,7 +116,7 @@ function Navbar() {
                       location.pathname === '/faculty' ? 'nav-active' : ''
                     }`}
                   >
-                    ACTIVITĂȚI
+                    ECHIPA
                   </a>
                 </Link>
                 <Link
