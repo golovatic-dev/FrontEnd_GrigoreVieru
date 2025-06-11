@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 import { Menu } from '@mui/icons-material'
 import { useLocation } from 'react-router-dom'
 import './styles/Navbar.css'
+import logo from '../assets/logo.png'
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -61,7 +62,7 @@ function Navbar() {
               data-aos-delay="300"
             >
               <img
-                src="src/assets/logo.png"
+                src={logo}
                 alt=""
                 className="navbar-brand rounded-full  object-fill  w-[50px] lg:w-[80px]  "
               />

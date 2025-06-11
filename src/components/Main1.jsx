@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import director_img from '../assets/director.jpg'
 
 function Main1() {
   useEffect(() => {
@@ -48,7 +49,7 @@ function Main1() {
         >
           <div className="flex items-center gap-3 justify-start ">
             <img
-              src="src/assets/director.jpg"
+              src={director_img}
               className="shadow rounded-full w-[80px] lg:w-[90px] h-[80px] lg:h-[90px] object-cover"
               alt="Director"
               data-aos="flip-left"

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-
+import brochure_img from '../assets/brouchure/brouchure_preview.png'
 function Main2() {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true })
@@ -52,7 +52,7 @@ function Main2() {
               download="brosura-gimnaziul-grigore-vieru.pdf"
             >
               <img
-                src="src/assets/brouchure/brouchure_preview.png"
+                src={brochure_img}
                 className="lg:w-full rounded-lg"
                 alt="Broșura Gimnaziului Grigore Vieru"
                 data-aos="flip-left"

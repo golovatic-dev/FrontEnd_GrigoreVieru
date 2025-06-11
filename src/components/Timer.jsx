@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-
+import logo_light from '../assets/logo_light.png'
 function Timer() {
   useEffect(() => {
     AOS.init({ once: true })
@@ -32,7 +32,7 @@ function Timer() {
           data-aos="fade-left"
           data-aos-delay="200"
         >
-          <img src="src/assets/logo_light.png" className="w-[300px]" />
+          <img src={logo_light} className="w-[300px]" />
         </div>
       </div>
     </div>

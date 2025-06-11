@@ -1,6 +1,7 @@
 import React from 'react'
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt'
 import { Link } from 'react-router-dom'
+import gymnasium_img from '../assets/gymnasium.png'
 function Main3() {
   return (
     <div className="parallax-container">
@@ -55,7 +56,7 @@ function Main3() {
               data-aos-delay="400"
             >
               <img
-                src="src/assets/gymnasium.png"
+                src={gymnasium_img}
                 alt=""
                 className="shadow-lg  rounded-4 w-[700px] h-[400px]"
               />
