@@ -204,7 +204,7 @@ function Navbar() {
                   </button>
                 </li>
               </ul>
-              <div className="d-lg-none d-block">
+              <div className="d-lg-none d-block menu-button">
                 <Menu
                   className="fw-bold fs-1 cursor-pointer "
                   onClick={() => setIsOpen(true)}

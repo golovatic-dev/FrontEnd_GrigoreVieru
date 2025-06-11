@@ -17,3 +17,13 @@
 .contactListBtn {
   padding-inline: 10px;
 }
+
+@media (max-width: 1280px) {
+  .navbar-expand-lg .navbar-nav {
+    display: none;
+  }
+
+  .menu-button {
+    display: block !important;
+  }
+}
