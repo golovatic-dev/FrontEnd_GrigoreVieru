@@ -7,6 +7,13 @@ import 'react-lazy-load-image-component/src/effects/blur.css'
 
 Modal.setAppElement('#root')
 
+const images = import.meta.glob('../assets/campus/*.{jpg,png}', {
+  eager: true,
+  as: 'url',
+})
+
+const campusImages = Object.values(images)
+
 const Campus = () => {
   const [selectedImage, setSelectedImage] = useState(null)
   const [selectedVideo, setSelectedVideo] = useState(null)
@@ -15,15 +22,6 @@ const Campus = () => {
   useEffect(() => {
     AOS.init({ duration: 800, once: true })
   }, [])
-
-  const campusImages = [
-    'src/assets/campus/gimnaziu.jpg',
-    'src/assets/campus/gimnaziu_2.jpg',
-    'src/assets/campus/gimnaziu_3.jpg',
-    'src/assets/campus/gimnaziu_4.jpg',
-    'src/assets/campus/gimnaziu_5.jpg',
-    'src/assets/campus/gimnaziu_6.png',
-  ]
 
   const campusVideos = [
     'https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FcentruldecreatieLoraGainaFalesti%2Fvideos%2F727610484894390%2F&show_text=false&width=560&t=0',
