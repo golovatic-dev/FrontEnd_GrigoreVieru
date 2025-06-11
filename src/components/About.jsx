@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import campus_img from '../assets/campus/campus_old.png'
 
 const About = () => {
   useEffect(() => {
@@ -51,7 +52,7 @@ const About = () => {
             data-aos-delay="200"
           >
             <img
-              src="src/assets/campus/campus_old.png"
+              src={campus_img}
               alt="Campusul gimnaziului"
               className="w-full h-auto object-cover rounded-lg shadow-2xl"
             />
