@@ -79,122 +79,90 @@ function Navbar() {
               <ul className="navbar-nav hidden lg:flex align-items-center ">
                 <Link
                   to="/"
-                  className="nav-item"
+                  className={`nav-item nav-link ${
+                    location.pathname === '/' ? 'nav-active' : ''
+                  }`}
                   data-aos="fade-left"
                   data-aos-delay="0"
                 >
-                  <a
-                    className={`nav-link ${
-                      location.pathname === '/' ? 'nav-active' : ''
-                    }`}
-                  >
-                    ACASĂ
-                  </a>
+                  ACASĂ
                 </Link>
                 <Link
                   to="/aboutus"
-                  className="nav-item me-3"
+                  className={`nav-item me-3 nav-link ${
+                    location.pathname === '/aboutus' ? 'nav-active' : ''
+                  }`}
                   data-aos="fade-left"
                   data-aos-delay="100"
                 >
-                  <a
-                    className={`nav-link ${
-                      location.pathname === '/aboutus' ? 'nav-active' : ''
-                    }`}
-                  >
-                    DESPRE NOI
-                  </a>
+                  DESPRE NOI
                 </Link>
                 <Link
                   to="/faculty"
-                  className="nav-item"
+                  className={`nav-item nav-link ${
+                    location.pathname === '/faculty' ? 'nav-active' : ''
+                  }`}
                   data-aos="fade-left"
                   data-aos-delay="200"
                 >
-                  <a
-                    className={`nav-link ${
-                      location.pathname === '/faculty' ? 'nav-active' : ''
-                    }`}
-                  >
-                    ECHIPA
-                  </a>
+                  ECHIPA
                 </Link>
                 <Link
                   to="/students"
-                  className="nav-item"
+                  className={`nav-item nav-link ${
+                    location.pathname === '/students' ? 'nav-active' : ''
+                  }`}
                   data-aos="fade-left"
                   data-aos-delay="300"
                 >
-                  <a
-                    className={`nav-link ${
-                      location.pathname === '/students' ? 'nav-active' : ''
-                    }`}
-                  >
-                    ELEVI
-                  </a>
+                  ELEVI
                 </Link>
                 <Link
                   to="/events"
-                  className="nav-item me-3"
+                  className={`nav-item me-3 nav-link ${
+                    location.pathname === '/events' ? 'nav-active' : ''
+                  }`}
                   data-aos="fade-left"
                   data-aos-delay="400"
                 >
-                  <a
-                    className={`nav-link ${
-                      location.pathname === '/events' ? 'nav-active' : ''
-                    }`}
-                  >
-                    EVENIMENTE
-                  </a>
+                  EVENIMENTE
                 </Link>
                 <Link
                   to="/curriculum"
-                  className="nav-item me-3"
+                  className={`nav-item me-3 nav-link ${
+                    location.pathname === '/curriculum' ? 'nav-active' : ''
+                  }`}
                   data-aos="fade-left"
                   data-aos-delay="500"
                 >
-                  <a
-                    className={`nav-link ${
-                      location.pathname === '/curriculum' ? 'nav-active' : ''
-                    }`}
-                  >
-                    ACADEMICE
-                  </a>
+                  ACADEMICE
                 </Link>
                 <Link
                   to="/moto"
-                  className="nav-item me-3"
+                  className={`nav-item me-3 nav-link ${
+                    location.pathname === '/moto' ? 'nav-active' : ''
+                  }`}
                   data-aos="fade-left"
                   data-aos-delay="600"
                 >
-                  <a
-                    className={`nav-link ${
-                      location.pathname === '/moto' ? 'nav-active' : ''
-                    }`}
-                  >
-                    MISIUNI
-                  </a>
+                  MISIUNI
                 </Link>
                 <Link
                   to="/campus"
-                  className="nav-item me-3"
+                  className={`nav-item me-3 nav-link ${
+                    location.pathname === '/campus' ? 'nav-active' : ''
+                  }`}
                   data-aos="fade-left"
                   data-aos-delay="700"
                 >
-                  <a
-                    className={`nav-link ${
-                      location.pathname === '/campus' ? 'nav-active' : ''
-                    }`}
-                  >
-                    OBSERVĂ
-                  </a>
+                  OBSERVĂ
                 </Link>
                 <li
-                  className="nav-item  me-3 contactListBtn"
+                  className="nav-item me-3 contactListBtn"
                   data-aos="fade-left"
                   data-aos-delay="800"
                 >
-                  <button className="btn  shadow btn-primary">
+                  <button className="btn shadow btn-primary">
                     <Link
                       to="/contact"
                       className="text-light text-decoration-none"
@@ -220,47 +188,30 @@ function Navbar() {
                   &times;
                 </div>
                 <ul className="mt-8 space-y-4 flex flex-col gap-3">
-                  <Link to="/">
-                    <a href="#" className="text-white">
-                      ACASĂ
-                    </a>
+                  <Link to="/" className="text-white">
+                    ACASĂ
                   </Link>
-                  <Link to="/aboutus">
-                    <a href="#" className="text-white">
-                      DESPRE NOI
-                    </a>
+                  <Link to="/aboutus" className="text-white">
+                    DESPRE NOI
                   </Link>
-                  <Link to="/faculty">
-                    <a href="#" className="text-white">
-                      ACTIVITĂȚI
-                    </a>
+                  <Link to="/faculty" className="text-white">
+                    ACTIVITĂȚI
                   </Link>
-                  <Link to="/students">
-                    <a href="#" className="text-white">
-                      ELEVI
-                    </a>
+                  <Link to="/students" className="text-white">
+                    ELEVI
                   </Link>
-                  <Link to="/events">
-                    <a href="#" className="text-white">
-                      EVEMINEMTE
-                    </a>
+                  <Link to="/events" className="text-white">
+                    EVEMINEMTE
                   </Link>
-                  <Link to="/curriculum">
-                    <a href="#" className="text-white">
-                      ACADEMICE
-                    </a>
+                  <Link to="/curriculum" className="text-white">
+                    ACADEMICE
                   </Link>
-                  <Link to="/moto">
-                    <a href="#" className="text-white">
-                      MISIUNE
-                    </a>
+                  <Link to="/moto" className="text-white">
+                    MISIUNE
                   </Link>
-                  <Link to="/campus">
-                    <a href="#" className="text-white">
-                      OBSERVĂ
-                    </a>
+                  <Link to="/campus" className="text-white">
+                    OBSERVĂ
                   </Link>
-
                   <li>
                     <button className="btn bg-blue-500 text-white">
                       <Link to="/contact" className="text-white">
