@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import campus_img from '../assets/campus/campus_old.png'
-
+import './styles/About.css' // Ensure you have the correct path to your AOS styles
 const About = () => {
   useEffect(() => {
     AOS.init({ duration: 800, once: true })
@@ -78,13 +78,13 @@ const About = () => {
         </div>
 
         <div
-          className="mt-20 text-center"
+          className="mt-20 text-center "
           data-aos="zoom-in-up"
           data-aos-delay="400"
         >
           <Link
             to="/events"
-            className="bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition duration-300"
+            className=" bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition text-center duration-300 block "
           >
             Descoperă Programele Noastre
           </Link>
