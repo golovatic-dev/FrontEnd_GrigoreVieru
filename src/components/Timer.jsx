@@ -8,7 +8,7 @@ function Timer() {
   }, [])
 
   return (
-    <div className="mt-3 mb-3 p-3 lg:p-5  text-light bg-gradient-to-br from-indigo-800 to-gray-800">
+    <div className="mt-3 mb-3 p-3 lg:p-5  text-light bg-gradient-to-br from-indigo-800 to-gray-800 overflow-hidden">
       <div
         className="container gap-3 lg:gap-0 flex flex-col lg:flex-row justify-around lg:p-5 p-4 items-center"
         data-aos="fade-up"

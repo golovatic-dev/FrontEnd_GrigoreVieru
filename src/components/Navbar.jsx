@@ -21,7 +21,7 @@ function Navbar() {
   }, [])
 
   return (
-    <nav className="w-[100vw]">
+    <nav className="w-[100vw] overflow-hidden">
       <div className="container-fluid ">
         <div
           className="row hidden lg:flex lg:items-center lg:justify-between p-3 text-white bg-gradient-to-br from-indigo-800 to-gray-800"

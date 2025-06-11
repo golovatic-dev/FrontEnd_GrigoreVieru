@@ -12,7 +12,7 @@ function Main3() {
           backgroundImage: `url(${main3_img})`,
         }}
       ></div>
-      <div className="container-fluid bg-dark position-absolute text-light d-flex justify-content-center align-items-center h-100 w-100 bg-opacity-25 ">
+      <div className="container-fluid bg-dark position-absolute text-light d-flex justify-content-center align-items-center h-100 w-100 bg-opacity-25  overflow-hidden">
         <div className=" container ">
           <div className="w-100 h-100 grid  grid-cols-1 lg:grid-cols-2 ">
             <div

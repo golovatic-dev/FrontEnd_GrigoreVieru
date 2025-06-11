@@ -17,7 +17,7 @@ function Main2() {
   }
 
   return (
-    <div className="pb-5 bg-gradient-to-br from-indigo-800 to-gray-800">
+    <div className="pb-5 bg-gradient-to-br from-indigo-800 to-gray-800 overflow-hidden">
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div

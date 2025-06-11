@@ -10,7 +10,7 @@ function Main1() {
 
   return (
     <div
-      className="lg:p-5 p-3 d-flex mt-4 mb-5 shadow bg-light flex-column align-items-center"
+      className="lg:p-5 p-3 d-flex mt-4 mb-5 shadow bg-light flex-column align-items-center overflow-hidden"
       style={{ backgroundColor: 'whitesmoke' }}
       data-aos="fade-up"
     >

@@ -10,7 +10,7 @@ function Checkout() {
   }, [])
 
   return (
-    <div className="pb-5 bg-body-secondary d-flex flex-column justify-content-center pt-5 align-items-center ">
+    <div className="pb-5 bg-body-secondary d-flex flex-column justify-content-center pt-5 align-items-center overflow-hidden">
       <h1
         className="lg:text-start text-center mb-5 lg:text-5xl text-2xl font-bold"
         data-aos="zoom-in"

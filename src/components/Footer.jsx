@@ -11,7 +11,7 @@ function Footer() {
   }, [])
 
   return (
-    <footer className="text-center text-lg-start text-muted">
+    <footer className="text-center text-lg-start text-muted overflow-hidden">
       <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
         <div className="me-5 d-none d-lg-block"></div>
         <div className=""></div>
