@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import brochure_img from '../assets/brouchure/brouchure_preview.png'
+import brochure_pdf from '../assets/brouchure/Brosura_Gimnaziul_Grigore_Vieru.pdf'
+
 function Main2() {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true })
@@ -9,7 +11,7 @@ function Main2() {
 
   const downloadBroucher = () => {
     const anchor = document.createElement('a')
-    anchor.href = 'src/assets/brouchure/Brosura_Gimnaziul_Grigore_Vieru.pdf'
+    anchor.href = brochure_pdf
     anchor.download = 'brosura-gimnaziul-grigore-vieru.pdf'
     anchor.click()
   }
@@ -48,7 +50,7 @@ function Main2() {
             data-aos="fade-left"
           >
             <a
-              href="src/assets/brouchure/Brosura_Gimnaziul_Grigore_Vieru.pdf"
+              href={brochure_pdf}
               download="brosura-gimnaziul-grigore-vieru.pdf"
             >
               <img

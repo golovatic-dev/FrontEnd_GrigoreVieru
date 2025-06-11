@@ -2,13 +2,14 @@ import React from 'react'
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt'
 import { Link } from 'react-router-dom'
 import gymnasium_img from '../assets/gymnasium.png'
+import main3_img from '../assets/main3_bg.png'
 function Main3() {
   return (
     <div className="parallax-container">
       <div
         className="parallax-bg   d-flex justify-content-center align-items-center  bg-center bg-no-repeat "
         style={{
-          backgroundImage: "url('src/assets/main3_bg.png')",
+          backgroundImage: `url(${main3_img})`,
         }}
       ></div>
       <div className="container-fluid bg-dark position-absolute text-light d-flex justify-content-center align-items-center h-100 w-100 bg-opacity-25 ">

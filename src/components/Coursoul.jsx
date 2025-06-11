@@ -2,6 +2,11 @@ import React, { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
+// Import images
+import gimnaziuImg from '../assets/carousel/gimnaziu.png'
+import carousel1Img from '../assets/carousel/carousel_1.png'
+import carousel2Img from '../assets/carousel/carousel_2.png'
+
 function Coursoul() {
   useEffect(() => {
     AOS.init({ duration: 1000, once: false })
@@ -17,7 +22,7 @@ function Coursoul() {
         <div
           className="carousel-item active"
           style={{
-            backgroundImage: "url('src/assets/carousel/gimnaziu.png')",
+            backgroundImage: `url(${gimnaziuImg})`,
             backgroundRepeat: 'none',
             backgroundPosition: 'center',
             backgroundSize: 'cover',
@@ -42,7 +47,7 @@ function Coursoul() {
         <div
           className="carousel-item"
           style={{
-            backgroundImage: "url('src/assets/carousel/carousel_1.png')",
+            backgroundImage: `url(${carousel1Img})`,
             backgroundRepeat: 'none',
             backgroundPosition: 'center',
             backgroundSize: 'cover',
@@ -67,7 +72,7 @@ function Coursoul() {
         <div
           className="carousel-item"
           style={{
-            backgroundImage: "url('src/assets/carousel/carousel_2.png')",
+            backgroundImage: `url(${carousel2Img})`,
             backgroundRepeat: 'none',
             backgroundPosition: 'center',
             backgroundSize: 'cover',

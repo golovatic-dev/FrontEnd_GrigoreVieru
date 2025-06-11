@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (max-width: 468px) {
+  h2 {
+    @apply text-4xl !important;
+  }
+}

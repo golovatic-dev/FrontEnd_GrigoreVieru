@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom'
 import { AccessTime, LocationOn, GetApp } from '@mui/icons-material'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import gymnasiumImg from '../assets/gymnasium.png'
+import './styles/Contact.css'
 
 function Contact() {
   const form = useRef()
@@ -45,7 +47,7 @@ function Contact() {
       <div
         className="relative h-[90vh] bg-cover bg-center"
         style={{
-          backgroundImage: "url('src/assets/gymnasium.png')",
+          backgroundImage: `url(${gymnasiumImg})`,
         }}
         data-aos="zoom-in"
         data-aos-duration="1200"
