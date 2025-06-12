@@ -3,14 +3,13 @@ import { Link } from 'react-router-dom'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import campus_img from '../assets/campus/campus_old.png'
-import './styles/About.css' // Ensure you have the correct path to your AOS styles
 const About = () => {
   useEffect(() => {
     AOS.init({ duration: 800, once: true })
   }, [])
 
   return (
-    <div className="bg-gradient-to-b from-blue-50 to-white py-20">
+    <div className="bg-gradient-to-b from-blue-50 to-white py-20 overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="text-center mb-20">
           <h1

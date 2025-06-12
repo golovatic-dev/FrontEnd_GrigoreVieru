@@ -40,7 +40,7 @@ function Contact() {
 
   return (
     <div
-      className="bg-gradient-to-b from-blue-50 to-white min-h-screen"
+      className="bg-gradient-to-b from-blue-50 to-white min-h-screen overflow-hidden"
       data-aos="fade-in"
       data-aos-duration="1200"
     >

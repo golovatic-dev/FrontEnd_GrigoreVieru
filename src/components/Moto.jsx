@@ -9,7 +9,7 @@ const Moto = () => {
   }, [])
 
   return (
-    <div className="bg-gradient-to-b from-blue-50 to-white py-20">
+    <div className="bg-gradient-to-b from-blue-50 to-white py-20 overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h1

@@ -115,7 +115,6 @@ const aboutData = [
   },
 ]
 
-// Map image filenames to imported URLs
 const aboutDataWithImages = aboutData.map((item) => ({
   ...item,
   image: images[`../assets/teachers/${item.image}`],
@@ -137,7 +136,7 @@ function Faculty() {
   )
 
   return (
-    <div className="container mx-auto px-4 py-16">
+    <div className="container mx-auto px-4 py-16 overflow-hidden">
       <h1
         className="text-4xl font-bold text-center mb-16 text-indigo-800"
         data-aos="fade-right"

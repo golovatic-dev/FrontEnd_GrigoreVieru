@@ -8,7 +8,7 @@ const Students = () => {
   }, [])
 
   return (
-    <div className="container mx-auto px-4 py-16 bg-gray-100">
+    <div className="container mx-auto px-4 py-16 bg-gray-100 overflow-hidden">
       <h1
         className="text-5xl font-bold text-center mb-16 text-indigo-800"
         data-aos="fade-down"

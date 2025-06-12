@@ -64,7 +64,7 @@ const Campus = () => {
   }
 
   return (
-    <div className="bg-gray-100 py-16">
+    <div className="bg-gray-100 py-16 overflow-hidden">
       <div className="container mx-auto text-center px-4">
         <section>
           <h2
