@@ -41,7 +41,7 @@ function Main3() {
               </p>
               <span data-aos="fade-up" data-aos-delay="300">
                 <Link
-                  to="/college"
+                  to="/aboutus"
                   className="btn shadow-lg  mt-5 fw-bold rounded-0 btn-primary"
                 >
                   {' '}
