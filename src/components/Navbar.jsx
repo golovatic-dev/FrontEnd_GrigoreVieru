@@ -179,7 +179,6 @@ function Navbar() {
                   onClick={() => setIsOpen(true)}
                 />
               </div>
-              {/* Mobile nav: no AOS attributes here */}
               <div
                 className={`fixed top-0 right-0 h-full bg-gray-800 text-white p-4 w-64 transform ${
                   isOpen ? 'translate-x-0' : 'translate-x-full'
