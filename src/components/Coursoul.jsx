@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
-// Import images
 import gimnaziuImg from '../assets/carousel/gimnaziu.png'
 import carousel1Img from '../assets/carousel/carousel_1.png'
 import carousel2Img from '../assets/carousel/carousel_2.png'

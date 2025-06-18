@@ -81,7 +81,7 @@ function Footer() {
         className="text-center p-4"
         style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}
       >
-        © 2024 Gimnaziul Sărata Veche. Toate drepturile rezervate.
+        © 2025 Gimnaziul Sărata Veche. Toate drepturile rezervate.
       </div>
     </footer>
   )
